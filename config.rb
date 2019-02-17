@@ -92,6 +92,7 @@ helpers do
   end
 end
 
+
 # dato.tap do |dato|
 #   dato.articles.each do |article|
 #     proxy(
@@ -132,6 +133,14 @@ langs.each do |locale|
       "templates/contact_page.html",
       locals: { locale: I18n.locale },
       locale: locale
+
+    dato.portfolios.each do |p|
+      proxy(
+        "/#{locale}/portfolio/#{p.slug}/index.html",
+        "/templates/portfolio.html",
+        locals: { portfolio: p }
+      )
+    end
   end
 end
 
