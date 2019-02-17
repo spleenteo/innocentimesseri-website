@@ -1,5 +1,8 @@
 footer.footer: .footer__inner
   .wrap
+    div
+      = inline_svg "logo_h.svg", size: "200*50"
+
     = ["©#{Time.now.year}",
         (link_to "Privacy Policy",
           "//www.iubenda.com/privacy-policy/#{I18n.t('iubenda_id')}",

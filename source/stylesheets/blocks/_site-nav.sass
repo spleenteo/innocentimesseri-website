@@ -1,5 +1,4 @@
 .site-nav
-  background: $base-body-color
   +vertical-padding(2)
   position: relative
 
@@ -31,14 +30,11 @@
   +horizontal-padding(1)
 
 .site-nav__topbar__locale-switcher__link
-  color: #FFFFFF
-
   &.is-current
 
 .site-nav__menu-toggler
   display: block
   +font-size(alpha)
-  color: #FFFFFF
 
 .site-nav__menu
   display: none
@@ -46,10 +42,10 @@
 .site-nav__menu__item
   display: inline-block
   +horizontal-padding(1)
+  text-transform: lowercase
+  text-decoration: none
 
 .site-nav__menu__link
-  color: #FFFFFF
-
   &.is-active
 
 +at-breakpoint(desk)

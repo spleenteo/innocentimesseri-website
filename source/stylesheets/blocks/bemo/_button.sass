@@ -1,6 +1,6 @@
 .button
   +heading-font-family
-  padding: 0.7em 1em
+  padding: 0.4em 1.3em
   text-decoration: none
   border: 2px solid $base-body-color
   display: inline-block
@@ -12,11 +12,11 @@
   background-color: transparent
   color: $base-body-color
   -webkit-appearance: none
-  border-radius: 0
+  border-radius: 30px
   box-sizing: border-box
   transition: box-shadow 0.1s $material-ease, transform 0.1s $material-ease, text-shadow 0.1s $material-ease
   font-size: 1.1em
-  box-shadow: 0 0 0 rgba(black, 0.2)
+  text-transform: uppercase
 
   & + &
     margin-left: 15px
@@ -64,8 +64,8 @@
   @extend .button
 
 .button--primary
-  color: $primary-color
-  border-color: $primary-color
+  color: $base-body-color
+  border-color: $base-body-color
 
 .button--notice
   color: $notice-color

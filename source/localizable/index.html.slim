@@ -1,2 +1,10 @@
-/- content_for(:head)
+/ - content_for(:head)
 /  == dato_meta_tags(page)
+
+.hero
+  .hero__body
+    .hero__body__inner
+      .hero__heading
+        = inline_svg "logo.svg", size: "500*400"
+      .hero__actions
+        = link_to "Contattaci", "#", class: "button--primary"

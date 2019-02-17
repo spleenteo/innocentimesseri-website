@@ -1,0 +1,15 @@
+
+.formatted_content
+  h1 = portfolio.title
+  = image_tag portfolio.featured_image.file.width(300).height(300).format('pjpg').to_url
+
+  .client
+    .client__logo = image_tag portfolio.client.logo.file.width(300).height(300).format('pjpg').to_url
+    .client_name = portfolio.client.name
+
+  .service = portfolio.service.title
+
+  hr
+
+  - portfolio.content.each do |c|
+    = c.name
