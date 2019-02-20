@@ -1,0 +1,19 @@
+- modifier ||= ""
+
+ul class=("site-nav__menu#{modifier}")
+  li.site-nav__menu__item
+    = active_link_to t('nav.home'),
+      "/#{I18n.locale}/",
+      class: "site-nav__menu__link"
+  li.site-nav__menu__item
+    = active_link_to t('nav.who'),
+      "/#{I18n.locale}/chi-siamo/",
+      class: "site-nav__menu__link"
+  li.site-nav__menu__item
+    = active_link_to t('nav.services'),
+      "/#{I18n.locale}/servizi/",
+      class: "site-nav__menu__link"
+  li.site-nav__menu__item
+    = active_link_to t('nav.portfolio'),
+      "/#{I18n.locale}/portfolio/",
+      class: "site-nav__menu__link"

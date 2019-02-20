@@ -1,25 +1,26 @@
-footer.footer: .footer__inner
-  .wrap
-    div
-      = inline_svg "logo_h.svg", size: "200*50"
+.canvas__footer
+  footer.footer: .footer__inner
+    .wrap
+      .footer__logo
+        = inline_svg "logo_h.svg", size: "200*50"
 
-    = ["©#{Time.now.year}",
-        (link_to "Privacy Policy",
-          "//www.iubenda.com/privacy-policy/#{I18n.t('iubenda_id')}",
-          class: "iubenda-nostyle no-brand iubenda-embed",
+      / = ["©#{Time.now.year}",
+      /     (link_to "Privacy Policy",
+      /       "//www.iubenda.com/privacy-policy/#{I18n.t('iubenda_id')}",
+      /       class: "iubenda-nostyle no-brand iubenda-embed",
+      /       target: "_blank",
+      /       rel: "noreferrer"),
+      /     (link_to "Cookie Policy",
+      /       "//www.iubenda.com/privacy-policy/#{I18n.t('iubenda_id')}/cookie-policy",
+      /       class: "iubenda-nostyle no-brand iubenda-embed",
+      /       target: "_blank", rel: "noreferrer")].join(" - ")
+
+      p.smallprint
+        = [(link_to t('credits.button_label'),
+          t('credits.url'),
+          title: t('credits.title'),
           target: "_blank",
           rel: "noreferrer"),
-        (link_to "Cookie Policy",
-          "//www.iubenda.com/privacy-policy/#{I18n.t('iubenda_id')}/cookie-policy",
-          class: "iubenda-nostyle no-brand iubenda-embed",
-          target: "_blank", rel: "noreferrer")].join(" - ")
-
-    p
-      = [(link_to t('credits.button_label'),
-        t('credits.url'),
-        title: t('credits.title'),
-        target: "_blank",
-        rel: "noreferrer"),
-        (link_to "Made with DatoCMS",
-          "https://datocms.com",
-          target: "_blank", rel: "noreferrer")].join(" - ")
+          (link_to "built with DatoCMS",
+            "https://datocms.com",
+            target: "_blank", rel: "noreferrer")].join(" - ")

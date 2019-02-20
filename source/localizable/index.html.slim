@@ -1,3 +1,7 @@
+---
+layout: landing
+---
+
 / - content_for(:head)
 /  == dato_meta_tags(page)
 
@@ -5,6 +9,7 @@
   .hero__body
     .hero__body__inner
       .hero__heading
-        = inline_svg "logo.svg", size: "500*400"
-      .hero__actions
-        = link_to "Contattaci", "#", class: "button--primary"
+        = inline_svg "logo.svg", class: "hero__heading__image"
+      .hero__text
+        h1.page__title Stiamo arrivando!
+

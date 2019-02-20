@@ -1,0 +1,24 @@
+/ - content_for(:head)
+/  == dato_meta_tags(page)
+
+.hero
+  .hero__body
+    .hero__body__inner
+      .hero__heading
+        = inline_svg "logo.svg", class: "hero__heading__image"
+      .hero__actions
+        = link_to "Contattaci", "#", class: "button--primary"
+
+section.space--both-2
+  .grid--center.grid--middle
+    .grid__item.desk-4-12.visible--on-desk
+      .area: .area__image
+        = inline_svg "who.svg", size: "100*100", title: "Chi siamo"
+
+    .grid__item.desk-4-12.visible--on-desk
+      .area: .area__image
+        = inline_svg "servizi.svg", size: "100*100", title: "servizi"
+
+    .grid__item.desk-4-12
+      .area: .area__image
+        = inline_svg "portfolio.svg", size: "100*100", title: "il nostro portfolio"

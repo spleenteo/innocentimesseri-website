@@ -15,6 +15,10 @@
 
 .site-nav__logo
   display: block
+  width: 220px
+
+  +at-breakpoint(desk)
+    width: 350px
 
 .site-nav__right
   flex: 1 0 60%
@@ -43,10 +47,11 @@
   display: inline-block
   +horizontal-padding(1)
   text-transform: lowercase
-  text-decoration: none
 
 .site-nav__menu__link
+  text-decoration: none
   &.is-active
+
 
 +at-breakpoint(desk)
   .site-nav__menu-toggler
@@ -54,3 +59,11 @@
 
   .site-nav__menu
     display: block
+
+.site-nav__menu--mobile
+  @extend .site-nav__menu
+  display: block
+
+  .site-nav__menu__item
+    display: block
+    +vertical-padding(1)

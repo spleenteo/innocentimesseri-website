@@ -11,14 +11,17 @@ it:
     en: "English"
 
   credits:
-    button_label: "Design & Development Cantiere Creativo"
+    button_label: "Made with ♥️"
     url: "https://www.cantierecreativo.net"
     title: "Cantiere Creativo Agenzia web Ruby on Rails Firenze"
 
   nav:
+    home: "Home"
     menu: "Menu"
-    home: "HOME"
     menu_close: "Chiudi"
+    portfolio: "Portfolio"
+    services: "Servizi"
+    who: "Chi siamo"
 
   form:
     label:

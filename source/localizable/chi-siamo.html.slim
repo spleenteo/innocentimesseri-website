@@ -1,9 +1,20 @@
-h1.alpha Piedi: a che mi servono se ho ali per volare?
-p Frida Khalo
+.hero
+  .hero__body
+    .hero__body__inner
+      .hero__heading
+        = inline_svg "who.svg", class: "hero__heading__image"
+        .hero__text
+          h1.page__title = dato.who.title
+          h2.page__subtitle = dato.who.subtitle
 
-article == dato.who.body
+section.section--article
+  article.formatted-content
+    == dato.who.body
 
-hr
+  .section__footer
+    = link_to "Contattaci", "#", class: "button--primary"
+
+
 
 - dato.team_members.each do |t|
   = image_tag t.avatar.url(w: 300, h: 300, fm: :jpg)
