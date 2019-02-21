@@ -13,9 +13,7 @@
     "start:webpack": "webpack --watch -d --progress --color",
     "build:webpack": "webpack --bail -p",
     "lint": "yarn run eslint source/javascripts/*",
-    "lint:autocorrect": "eslint source/javascripts/* --fix",
-    "start": "concurrently \"npm run start:proxy\" \"npm run start:lambda\" \"npm run start:webpack\"",
-    "build": "concurrently \"npm run build:lambda\" \"bundle exec middleman build\""
+    "lint:autocorrect": "eslint source/javascripts/* --fix"
   },
   "author": "Cantiere Creativo s.r.l.",
   "main": "index.js",
