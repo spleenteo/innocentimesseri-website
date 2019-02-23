@@ -1,0 +1,13 @@
+.hero
+  .hero__body
+    .hero__body__inner
+      .hero__heading
+        = inline_svg "servizi.svg", class: "hero__heading__image"
+
+section.section
+  .grid--center
+    - dato.services.each do |s|
+      .grid__item.tab-5-12.space--bottom-2
+        h2.beta style="color: #{s.color.hex}" = s.title
+        p == s.description if s.description.present?
+
