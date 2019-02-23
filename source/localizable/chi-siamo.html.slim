@@ -15,9 +15,17 @@ section.section--article
     = link_to "Contattaci", "#", class: "button--primary"
 
 
+section.section--border-top
+  / pre = dato.who.team_module.count.to_yaml
+  .grid
 
-- dato.team_members.each do |t|
-  = image_tag t.avatar.url(w: 300, h: 300, fm: :jpg)
-  p = t.name
-  p = t.phone
-  p = t.email
+    - dato.who.team_module.each do |t|
+      .grid__item.tab-6-12
+        .who
+          .who__image
+            = image_tag t.avatar.file.width(600).height(450).fit('crop').format('pjpg').to_url
+          .who__name
+            p = t.name
+          .who__body
+            p cell. #{t.phone}
+            p = mail_to t.email

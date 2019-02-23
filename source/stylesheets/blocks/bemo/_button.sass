@@ -15,12 +15,11 @@
   border-radius: 30px
   box-sizing: border-box
   transition: box-shadow 0.1s $material-ease, transform 0.1s $material-ease, text-shadow 0.1s $material-ease
-  font-size: 1.1em
   text-transform: uppercase
+  +font-size(smallprint)
 
   & + &
-    margin-left: 15px
-
+    margin-left: 1em
 
   .no-touch &:hover
     box-shadow: 0 3px 5px rgba(black, 0.2)
@@ -42,15 +41,15 @@
 
 .button--small
   @extend .button
-  font-size: 0.9em
+  +font-size(milli)
 
 .button--large
   @extend .button
-  font-size: 1.1em
+  +font-size(delta)
 
 .button--huge
   @extend .button
-  font-size: 1.3em
+  +font-size(gamma)
 
 .button--expand
   @extend .button

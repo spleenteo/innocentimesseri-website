@@ -1,13 +1,22 @@
 .section
   +vertical-padding(3)
 
+.section__tag
+  +font-size(milli)
+  background-color: $primary-color
+  border-radius: 7px
+  display: inline-block
+  +horizontal-padding(1)
+  color: $white-color
+  font-weight: bold
 
 .section__footer
   text-align: center
   +vertical-padding(1)
 
-
-
+.section--border-top
+  @extend .section
+  border-top: 1px solid $border-color
 
 .section--article
   @extend .section

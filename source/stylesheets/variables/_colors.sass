@@ -9,7 +9,7 @@ $orange-color  : #EC632B
 $purple-color  : #711162
 $purple-l-color: #8C517B
 $red-color     : #E6333B
-$white-color   : #FFF
+$white-color   : #FFFFFF
 $yellow-color  : #FBBA00
 
 
@@ -26,3 +26,37 @@ $alert-color: $red-color
 $notice-color: $yellow-color
 $primary-color: $green-color
 
+$colors: () !default
+$colors: map-merge($colors, (black: #575756))
+$colors: map-merge($colors, (cyan: #6CC7E2))
+$colors: map-merge($colors, (gray: #d3d3d3))
+$colors: map-merge($colors, (gray-xxl: #f9f9f9))
+$colors: map-merge($colors, (green: #09AFAB))
+$colors: map-merge($colors, (magenta: #E62D5F))
+$colors: map-merge($colors, (orange: #EC632B))
+$colors: map-merge($colors, (purple: #711162))
+$colors: map-merge($colors, (purple-l: #8C517B))
+$colors: map-merge($colors, (red: #E6333B))
+$colors: map-merge($colors, (white: #FFFFFF))
+$colors: map-merge($colors, (yellow: #FBBA00))
+$colors: map-merge($colors, (primary: $black-color))
+$colors: map-merge($colors, (border: $border-color))
+$colors: map-merge($colors, (base-body: $base-body-color))
+$colors: map-merge($colors, (light-body: $light-body-color))
+$colors: map-merge($colors, (light-bg: $light-bg-color))
+$colors: map-merge($colors, (dark-bg: $dark-bg-color))
+$colors: map-merge($colors, (notice: $notice-color))
+$colors: map-merge($colors, (alert: $alert-color))
+
+// sarebbe bello, è corretto, ma il compiler si incazza
+// $colors: (
+//   grey: (
+//     dark: #444,
+//     base: #666,
+//     light: #999
+//   ),
+//   brand: (
+//     pink: #ff69b4,
+//     blue: #0000ff
+//   )
+// )
