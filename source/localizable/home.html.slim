@@ -40,6 +40,6 @@ section.section
 
 section.section--white
   .clients
-    - dato.clients.each do |c|
+    - dato.clients.select{|c| c.highlight == true}.sort_by(&:position).each do |c|
       .clients__item
-        = image_tag c.logo.file.width(100).height(100).format('pjpg').to_url
+        = image_tag c.logo.file.width(100).height(100).format('pjpg').to_url, title: c.name
