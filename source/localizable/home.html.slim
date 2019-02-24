@@ -1,5 +1,5 @@
-/ - content_for(:head)
-/  == dato_meta_tags(page)
+- content_for(:head)
+ == dato_meta_tags(dato.home_page)
 
 .hero
   .hero__body
@@ -22,6 +22,23 @@ section.space--both-2
     .grid__item.desk-4-12
       .area: .area__image
         = inline_svg "portfolio.svg", size: "100*100", title: "il nostro portfolio"
+
+
+section.section
+  .works.js-works
+    - (0..3).each do
+      - dato.portfolios.select{|p| p.published == true && p.in_home == true}.sort_by(&:position).each do |p|
+        = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work js-work work--#{p.service.codename} #{p.service.codename}"
+          .work__image
+            = image_tag p.featured_image.file.width(600).format('pjpg').to_url
+          .work__body
+            .work__body__title
+              h3 = p.title
+              p = p.service.title.downcase
+
+
+
+
 
 
 section.section
