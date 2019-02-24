@@ -8,16 +8,24 @@
 
 section.section--border-top
 
+  .work-filters.js-isotope-filters
+    .work-filters__title Tipologia di servizi
+
+    .js-filter.work-filters__trigger data-filter-value="*" tutti
+    - dato.services.each do |s|
+
+      - if dato.portfolios.select{|p| p.published == true && p.service == s}.count > 0
+        .js-filter.work-filters__trigger class="work-filters__trigger--#{s.codename}"data-filter-value=".#{s.codename}" = s.title
+
   .works.js-works
-    - (0..3).each do
-      - dato.portfolios.each do |p|
-        = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work js-work work--#{p.service.codename}"
-          .work__image
-            = image_tag p.featured_image.file.width(600).format('pjpg').to_url
-          .work__body
-            .work__body__title
-              h3 = p.title
-              p = p.service.title.downcase
+    - dato.portfolios.select{|p| p.published == true}.sort_by(&:position).each do |p|
+      = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work js-work work--#{p.service.codename} #{p.service.codename}"
+        .work__image
+          = image_tag p.featured_image.file.width(600).format('pjpg').to_url
+        .work__body
+          .work__body__title
+            h3 = p.title
+            p = p.service.title.downcase
 
 
 

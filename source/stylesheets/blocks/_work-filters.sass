@@ -1,0 +1,23 @@
+.work-filters
+  +vertical-margin(2)
+
+.work-filters__title
+  +font-size(smallprint)
+  text-transform: uppercase
+  +margin-bottom(1)
+
+.work-filters__trigger
+  display: inline-block
+  margin-right: 20px
+  cursor: pointer
+  text-transform: lowercase
+  +font-size(smallprint)
+
+  &:hover
+    color: color(primary)
+
+@each $service in $services
+  .work-filters__trigger--#{$service}
+    @extend .work-filters__trigger
+    &.current
+      color: color($service)

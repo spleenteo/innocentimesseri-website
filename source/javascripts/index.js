@@ -25,13 +25,22 @@ $(document).ready(function() {
 
   new ImagesLoader( $('.js-works'), function( instance ) {
 
-    var iso = new Isotope( '.js-works', {
+    var $iso = new Isotope( '.js-works', {
       itemSelector: '.js-work',
       percentPosition: true,
       masonry: {
         gutter: 10
       }
     });
+
+    $('.js-isotope-filters' ).on( 'click', '.js-filter', function( event ) {
+      $('.js-isotope-filters .js-filter').removeClass("current");
+      $(this).addClass("current");
+      var filterValue = $(this).attr('data-filter-value');
+      $iso.arrange({ filter: filterValue });
+      $('html,body').animate({scrollTop: $(this).offset().top - 100}, 800);
+    });
+
   });
 
   // passing a selector (document.querySelector is used to get the node)
