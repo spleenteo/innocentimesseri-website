@@ -1,15 +1,12 @@
+.case
+  h1.case__title = portfolio.title
+  .case__subtitle = portfolio.service.title
 
-.formatted_content
-  h1 = portfolio.title
-  = image_tag portfolio.featured_image.file.width(300).height(300).format('pjpg').to_url
+= image_tag portfolio.featured_image.file.width(1200).height(500).fit("crop").format('pjpg').to_url
 
-  .client
-    .client__logo = image_tag portfolio.client.logo.file.width(300).height(300).format('pjpg').to_url
-    .client_name = portfolio.client.name
-
-  .service = portfolio.service.title
-
-  hr
+.case__client
+  .client__logo = image_tag portfolio.client.logo.file.width(300).height(300).format('pjpg').to_url
+  .client_name = portfolio.client.name
 
 - portfolio.content.each do |modular|
   = partial "partials/modules/#{modular.item_type.api_key}",

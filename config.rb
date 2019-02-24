@@ -138,7 +138,8 @@ langs.each do |locale|
       proxy(
         "/#{locale}/portfolio/#{p.slug}/index.html",
         "/templates/portfolio.html",
-        locals: { portfolio: p }
+        locals: { portfolio: p },
+        locale: locale
       )
     end
   end
