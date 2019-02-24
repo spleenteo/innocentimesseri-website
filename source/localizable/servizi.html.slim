@@ -6,8 +6,9 @@
 
 section.section
   .grid--center
-    - dato.services.each do |s|
-      .grid__item.tab-5-12.space--bottom-2
-        h2.beta style="color: #{s.color.hex}" = s.title
-        p == s.description if s.description.present?
+    - dato.services.sort_by(&:position).each do |s|
+      .grid__item.tab-5-12.space--bottom-5
+        div class=("service--#{s.codename.downcase}")
+          h2.service__title = s.title
+          .service__body == s.description if s.description.present?
 

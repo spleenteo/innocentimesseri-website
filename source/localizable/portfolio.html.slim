@@ -1,2 +1,21 @@
-- dato.portfolios.each do |p|
-  = link_to p.title, "/#{I18n.locale}/portfolio/#{p.slug}/"
+.hero
+  .hero__body
+    .hero__body__inner
+      .hero__heading
+        = inline_svg "portfolio.svg", class: "hero__heading__image"
+      .hero__text
+        h1.page__title = dato.portfolio_page.title
+
+section.section--border-top
+  - dato.portfolios.each do |p|
+
+    = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work work--#{p.service.codename}"
+      .work__image
+        = image_tag p.featured_image.file.width(600).format('pjpg').to_url
+      .work__body
+        .work__body__title
+          h3 = p.title
+          p = p.service.title.downcase
+
+
+

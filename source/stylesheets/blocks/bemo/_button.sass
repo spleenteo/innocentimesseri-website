@@ -64,7 +64,13 @@
 
 .button--primary
   color: $base-body-color
-  border-color: $base-body-color
+  border-color: color(primary)
+
+  &:hover
+    color: color(white)
+    background-color: color(primary)
+    transition: all .3s
+
 
 .button--notice
   color: $notice-color

@@ -22,3 +22,10 @@ section.space--both-2
     .grid__item.desk-4-12
       .area: .area__image
         = inline_svg "portfolio.svg", size: "100*100", title: "il nostro portfolio"
+
+
+section.section
+  .clients
+    - dato.clients.each do |c|
+      .clients__item
+        = image_tag c.logo.file.width(100).height(100).format('pjpg').to_url

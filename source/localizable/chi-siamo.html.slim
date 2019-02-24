@@ -3,9 +3,9 @@
     .hero__body__inner
       .hero__heading
         = inline_svg "who.svg", class: "hero__heading__image"
-        .hero__text
-          h1.page__title = dato.who.title
-          h2.page__subtitle = dato.who.subtitle
+      .hero__text
+        h1.page__title = dato.who.title
+      .page__subtitle = dato.who.subtitle
 
 section.section--article
   article.formatted-content
@@ -24,8 +24,7 @@ section.section--border-top
         .who
           .who__image
             = image_tag t.avatar.file.width(600).height(450).fit('crop').format('pjpg').to_url
-          .who__name
-            p = t.name
+          p.who__name = t.name
           .who__body
             p cell. #{t.phone}
             p = mail_to t.email

@@ -2,57 +2,68 @@
   .page__title Style guide sito web
 
 
-section.section
+section.section.sg__colors
   .section__tag Palette colori
   .grid
     .grid__item.width-3-12
-      p.bgcolor--black black
-      p.bgcolor--cyan cyan
-      p.bgcolor--gray gray
-      p.bgcolor--gray-xxl gray-xxl
-      p.bgcolor--green green
-      p.bgcolor--magenta magenta
-      p.bgcolor--orange orange
-      p.bgcolor--purple purple
-      p.bgcolor--purple-l purple-l
-      p.bgcolor--red red
-      p.bgcolor--white white
-      p.bgcolor--yellow yellow
+      p.bgcolor--black: span black
+      p.bgcolor--cyan: span cyan
+      p.bgcolor--gray: span gray
+      p.bgcolor--gray-xxl: span gray-xxl
+      p.bgcolor--green: span green
+      p.bgcolor--magenta: span magenta
+      p.bgcolor--orange: span orange
+      p.bgcolor--purple: span purple
+      p.bgcolor--purple-l: span purple-l
+      p.bgcolor--red: span red
+      p.bgcolor--white: span white
+      p.bgcolor--yellow: span yellow
 
     .grid__item.width-3-12
-      p.color--black black
-      p.color--cyan cyan
-      p.color--gray gray
-      p.color--gray-xxl gray-xxl
-      p.color--green green
-      p.color--magenta magenta
-      p.color--orange orange
-      p.color--purple purple
-      p.color--purple-l purple-l
-      p.color--red red
-      p.color--white white
-      p.color--yellow yellow
+      p.color--black: span black
+      p.color--cyan: span cyan
+      p.color--gray: span gray
+      p.color--gray-xxl: span gray-xxl
+      p.color--green: span green
+      p.color--magenta: span magenta
+      p.color--orange: span orange
+      p.color--purple: span purple
+      p.color--purple-l: span purple-l
+      p.color--red: span red
+      p.color--white: span white
+      p.color--yellow: span yellow
 
     .grid__item.width-3-12
-      p.bgcolor--alert alert
-      p.bgcolor--base-body base-body
-      p.bgcolor--border border
-      p.bgcolor--dark-bg dark-bg
-      p.bgcolor--light-bg light-bg
-      p.bgcolor--light-body light-body
-      p.bgcolor--notice notice
-      p.bgcolor--primary primary
+      p.bgcolor--primary: span primary
+      p.bgcolor--base-body: span base-body
+      p.bgcolor--light-body: span light-body
+      p.bgcolor--dark-bg: span dark-bg
+      p.bgcolor--light-bg: span light-bg
+      p.bgcolor--border: span border
+      p.bgcolor--alert: span alert
+      p.bgcolor--notice: span notice
+      p.bgcolor--branding: span branding
+      p.bgcolor--comunicazione: span comunicazione
+      p.bgcolor--web: span web
+      p.bgcolor--marketing: span marketing
+      p.bgcolor--allestimenti: span allestimenti
+      p.bgcolor--packaging: span packaging
 
     .grid__item.width-3-12
-      p.color--alert alert
+      p.color--primary primary
       p.color--base-body base-body
-      p.color--border border
+      p.color--light-body light-body
       p.color--dark-bg dark-bg
       p.color--light-bg light-bg
-      p.color--light-body light-body
+      p.color--border border
+      p.color--alert alert
       p.color--notice notice
-      p.color--primary primary
-
+      p.color--branding branding
+      p.color--comunicazione comunicazione
+      p.color--web web
+      p.color--marketing marketing
+      p.color--allestimenti allestimenti
+      p.color--packaging packaging
 
 section.section
   .section__tag Bottoni
@@ -68,6 +79,11 @@ section.section
       li.button--rev Button rev
       li.button--expand Button expand
 
+section.section
+  .section__tag Links
+
+  p = link_to "Esempio di testo con link", "#"
+
 
 section.section
   .section__tag Font fmilies
@@ -77,13 +93,16 @@ section.section
 
 
 section.section
-  .section__tag Dimensione testi
+  .section__tag Font sizes
 
-  .alpha 30px - Titolo Alpha
-  .beta  27px - Titolo Beta
-  .gamma  22px - Titolo Gamma
-  .delta  20px - Titolo Gamma
+  .huge 40px - Titolo Huge
+  .alpha 30px - Titolo Alpha h1
+  .beta  27px - Titolo Beta h2
+  .gamma  22px - Titolo Gamma h3
+  .delta  20px - Titolo Delta h4
   p 18px - Testo regular default
+  p.smallprint 14px - Testo smallprint
+  p.milli 12px - Testo milli
 
 
 section.section

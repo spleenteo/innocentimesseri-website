@@ -21,6 +21,11 @@
 .section--article
   @extend .section
   article
-    width: 70%
+    width: 90%
     margin: auto
     text-align: center
+
+    +at-breakpoint(tab)
+      width: 70%
+    +at-breakpoint(desk)
+      width: 50%
