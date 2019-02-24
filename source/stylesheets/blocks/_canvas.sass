@@ -30,8 +30,18 @@ $canvas-footer-height: 150px
 
 .canvas__aside--right
   @extend .canvas__aside
+  display: none
+  visibility: hidden
+  opacity: 0
+  transition: opacity .5s ease
+
   .canvas.is-shifted &
+    transition: opacity .5s ease
     box-shadow: -3px 0 5px rgba(#000, 0.2)
+    display: block
+    visibility: visible
+    opacity: 1
+
 
 +canvas-layout(290px)
 +canvas-layout(290px, "right")
