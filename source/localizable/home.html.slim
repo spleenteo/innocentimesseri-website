@@ -27,7 +27,7 @@ section.space--both-2
 section.section
   .works.js-works
     - (0..3).each do
-      - dato.portfolios.select{|p| p.published == true && p.in_home == true}.sort_by(&:position).each do |p|
+      - dato.portfolios.select{|p| p.published == true && p.highlight == true}.sort_by(&:position).each do |p|
         = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work js-work work--#{p.service.codename} #{p.service.codename}"
           .work__image
             = image_tag p.featured_image.file.width(600).format('pjpg').to_url
@@ -38,10 +38,7 @@ section.section
 
 
 
-
-
-
-section.section
+section.section--white
   .clients
     - dato.clients.each do |c|
       .clients__item
