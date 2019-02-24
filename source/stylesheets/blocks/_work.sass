@@ -1,14 +1,22 @@
 .work
-  max-width: $work-box-width
   display: block
   overflow: hidden
   position: relative
   +margin-bottom(1)
+  max-width: 100%
+  margin-right: 0
 
   &:hover
     .work__body
       transition: all .3s ease-in
       left: 0
+
+  +at-breakpoint(tab)
+    max-width: 48%
+    margin-right: 0
+  +at-breakpoint(lap)
+    max-width: 33%
+    margin-right: 0
 
 .work__image
   line-height: 0
@@ -17,7 +25,7 @@
   position: absolute
   top: 0
   bottom: 0
-  width: 80%
+  width: 100%
   left: -500px
 
   &:after

@@ -3,6 +3,8 @@ global.jQuery = $;
 
 import modernizr from 'modernizr';
 import slick from 'slick-carousel';
+var Isotope = require('isotope-layout');
+var ImagesLoader =  require('imagesloaded');
 
 $(document).ready(function() {
   // CANVAS ASIDE LEFT
@@ -19,6 +21,20 @@ $(document).ready(function() {
     e.preventDefault;
     $(".canvas").removeClass("is-shifted shift-left shift-right");
   });
+
+
+  new ImagesLoader( $('.js-isotope'), function( instance ) {
+
+    var iso = new Isotope( '.js-works', {
+      itemSelector: '.js-work',
+      percentPosition: true,
+      masonry: {
+        gutter: 10
+      }
+    });
+  });
+
+  // passing a selector (document.querySelector is used to get the node)
 
   // CAROUSEL WITH SLICK
   /*
