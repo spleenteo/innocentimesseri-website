@@ -9,14 +9,15 @@
 section.section--border-top
 
   .works.js-works
-    - dato.portfolios.each do |p|
-      = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work js-work work--#{p.service.codename}"
-        .work__image
-          = image_tag p.featured_image.file.width(600).format('pjpg').to_url
-        .work__body
-          .work__body__title
-            h3 = p.title
-            p = p.service.title.downcase
+    - (0..3).each do
+      - dato.portfolios.each do |p|
+        = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work js-work work--#{p.service.codename}"
+          .work__image
+            = image_tag p.featured_image.file.width(600).format('pjpg').to_url
+          .work__body
+            .work__body__title
+              h3 = p.title
+              p = p.service.title.downcase
 
 
 

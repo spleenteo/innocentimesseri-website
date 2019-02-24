@@ -23,7 +23,7 @@ $(document).ready(function() {
   });
 
 
-  new ImagesLoader( $('.js-isotope'), function( instance ) {
+  new ImagesLoader( $('.js-works'), function( instance ) {
 
     var iso = new Isotope( '.js-works', {
       itemSelector: '.js-work',
