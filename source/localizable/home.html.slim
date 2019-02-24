@@ -40,6 +40,8 @@ section.section
 
 section.section--white
   .clients
-    - dato.clients.select{|c| c.highlight == true}.sort_by(&:position).each do |c|
-      .clients__item
-        = image_tag c.logo.file.width(100).height(100).format('pjpg').to_url, title: c.name
+    .grid--center
+      - dato.clients.select{|c| c.highlight == true}.sort_by(&:position).each do |c|
+        .grid__item.tab-3-12.lap-2-12.desk-1-12
+          .clients__item.space--bottom-1.align--center
+            = image_tag c.logo.file.width(100).height(100).format('pjpg').to_url, title: c.name

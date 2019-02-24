@@ -1,0 +1,5 @@
+section.section
+
+.carousel
+  - content.gallery.each do |i|
+      = image_tag i.file.width(900).height(500).format('pjpg').to_url

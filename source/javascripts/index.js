@@ -46,7 +46,7 @@ $(document).ready(function() {
   // passing a selector (document.querySelector is used to get the node)
 
   // CAROUSEL WITH SLICK
-  /*
+
   $(".carousel").slick({
     mobileFirst: true,
     slidesToShow: 1,
@@ -56,5 +56,5 @@ $(document).ready(function() {
     autoplay: false,
     adaptiveHeight: true
   })
-  */
+
 });

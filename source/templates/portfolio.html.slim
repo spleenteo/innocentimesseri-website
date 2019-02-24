@@ -10,3 +10,7 @@
   .service = portfolio.service.title
 
   hr
+
+- portfolio.content.each do |modular|
+  = partial "partials/modules/#{modular.item_type.api_key}",
+    locals: {content: modular}
