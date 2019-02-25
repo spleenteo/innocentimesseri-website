@@ -8,10 +8,9 @@ html lang=I18n.locale
         = partial "partials/aside-nav-left"
       main.canvas__main
         = partial "partials/site-nav"
-        .wrap
-          = yield
+        = yield
+        = partial "partials/site-footer"
       aside.canvas__aside--right
         = partial "partials/aside-nav-right"
 
-      = partial "partials/site-footer"
     = partial "partials/js_includes"

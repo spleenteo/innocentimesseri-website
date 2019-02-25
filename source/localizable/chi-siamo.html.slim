@@ -11,23 +11,23 @@
       .page__subtitle = dato.who.subtitle
 
 section.section--article
-  article.formatted-content
-    == dato.who.body
+  .wrap
+    article.formatted-content
+      == dato.who.body
 
-  .section__footer
-    = link_to "Contattaci", "#", class: "button--primary"
+    .section__footer
+      = link_to "Contattaci", "#", class: "button--primary"
 
 
-section.section--border-top
-  / pre = dato.who.team_module.count.to_yaml
-  .grid
-
-    - dato.who.team_module.each do |t|
-      .grid__item.tab-6-12
-        .who
-          .who__image
-            = image_tag t.avatar.file.width(600).height(450).fit('crop').format('pjpg').to_url
-          p.who__name = t.name
-          .who__body
-            p cell. #{t.phone}
-            p = mail_to t.email
+.wrap
+  section.section--border-top
+    .grid
+      - dato.who.team_module.each do |t|
+        .grid__item.tab-6-12
+          .who
+            .who__image
+              = image_tag t.avatar.file.width(600).height(450).fit('crop').format('pjpg').to_url
+            p.who__name = t.name
+            .who__body
+              p cell. #{t.phone}
+              p = mail_to t.email

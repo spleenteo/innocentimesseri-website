@@ -7,7 +7,7 @@
       .hero__heading
         = inline_svg "servizi.svg", class: "hero__heading__image"
 
-section.section
+section.section: .wrap
   .grid--center
     - dato.services.sort_by(&:position).each do |s|
       .grid__item.tab-5-12.space--bottom-5

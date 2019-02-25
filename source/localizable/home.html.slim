@@ -10,35 +10,37 @@
         = link_to "Contattaci", "#", class: "button--primary"
 
 section.space--both-2
-  .grid--center.grid--middle
-    .grid__item.desk-4-12.visible--on-desk
-      .area: .area__image
-        = inline_svg "who.svg", size: "100*100", title: "Chi siamo"
+  .wrap
+    .grid--center.grid--middle
+      .grid__item.desk-4-12.visible--on-desk
+        .area: .area__image
+          = inline_svg "who.svg", size: "100*100", title: "Chi siamo"
 
-    .grid__item.desk-4-12.visible--on-desk
-      .area: .area__image
-        = inline_svg "servizi.svg", size: "100*100", title: "servizi"
+      .grid__item.desk-4-12.visible--on-desk
+        .area: .area__image
+          = inline_svg "servizi.svg", size: "100*100", title: "servizi"
 
-    .grid__item.desk-4-12
-      .area: .area__image
-        = inline_svg "portfolio.svg", size: "100*100", title: "il nostro portfolio"
+      .grid__item.desk-4-12
+        .area: .area__image
+          = inline_svg "portfolio.svg", size: "100*100", title: "il nostro portfolio"
 
 
 section.section
-  .works.js-works
-    - dato.portfolios.select{|p| p.published == true && p.highlight == true}.sort_by(&:position).each do |p|
-      = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work js-work work--#{p.service.codename} #{p.service.codename}"
-        .work__image
-          = image_tag p.featured_image.file.width(600).format('pjpg').to_url
-        .work__body
-          .work__body__title
-            h3 = p.title
-            p = p.service.title.downcase
+  .wrap
+    .works.js-works
+      - dato.portfolios.select{|p| p.published == true && p.highlight == true}.sort_by(&:position).each do |p|
+        = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work js-work work--#{p.service.codename} #{p.service.codename}"
+          .work__image
+            = image_tag p.featured_image.file.width(600).format('pjpg').to_url
+          .work__body
+            .work__body__title
+              h3 = p.title
+              p = p.service.title.downcase
 
 
 
 section.section--white
-  .clients
+  .wrap: .clients
     .grid--center
       - dato.clients.select{|c| c.highlight == true}.sort_by(&:position).each do |c|
         .grid__item.palm-6-12.tab-3-12.lap-2-12
