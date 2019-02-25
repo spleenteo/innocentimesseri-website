@@ -1,9 +1,6 @@
-$canvas-footer-height: 150px
-
 .canvas
   position: relative
-  min-height: 100vh
-  margin-bottom: -$canvas-footer-height
+  overflow: hidden
 
   &.is-shifted
     +position(absolute, 0px 0px 0px 0px)
@@ -11,7 +8,6 @@ $canvas-footer-height: 150px
 
 .canvas__main
   transition: transform 0.5s $material-ease
-  padding-bottom: $canvas-footer-height
 
 .canvas__aside
   z-index: 2
@@ -30,18 +26,9 @@ $canvas-footer-height: 150px
 
 .canvas__aside--right
   @extend .canvas__aside
-  display: block
-  visibility: hidden
-  opacity: 0
-  transition: opacity .5s ease
-
+  background: color(white)
   .canvas.is-shifted &
-    transition: opacity .5s ease
     box-shadow: -3px 0 5px rgba(#000, 0.2)
-    display: block
-    visibility: visible
-    opacity: 1
-
 
 +canvas-layout(290px)
 +canvas-layout(290px, "right")
@@ -49,9 +36,3 @@ $canvas-footer-height: 150px
 +at-breakpoint(lap)
   +canvas-layout(400px)
   +canvas-layout(400px, "right")
-
-.canvas__footer
-  position: absolute
-  bottom: 0
-  width: 100%
-  height: $canvas-footer-height
