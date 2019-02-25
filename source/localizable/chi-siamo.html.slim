@@ -24,7 +24,7 @@ section.section--article
     .grid
       - dato.who.team_module.each do |t|
         .grid__item.tab-6-12
-          .who
+          .who.space--bottom-5.space--bottom-1-on-tab
             .who__image
               = image_tag t.avatar.file.width(600).height(450).fit('crop').format('pjpg').to_url
             p.who__name = t.name
