@@ -1,0 +1,34 @@
+.case
+.case__header
+  text-align: center
+  +vertical-padding(2)
+
+.case__logo
+  img
+    max-width: 100px
+  +at-breakpoint(lap)
+    img
+      max-width: 100%
+
+.case__title
+  +heading-font-family
+  +font-size(gamma)
+
+  +at-breakpoint(lap)
+    +font-size(alpha)
+
+.case__subtitle
+
+.case__featured
+
+.case__btitle
+  +heading-font-family
+  +font-size(delta)
+  font-weight: bold
+  text-align: center
+
+  +at-breakpoint(lap)
+    +font-size(beta)
+
+.case__btext
+  text-align: center

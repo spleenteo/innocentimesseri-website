@@ -1,4 +1,5 @@
-figure
-  = image_tag content.image.file.width(900).height(500).format('pjpg').to_url
-  - if content.image.title.present?
-    figcaption = content.image.title
+section.section
+  figure.case__bimage
+    = image_tag content.image.file.width(1200).format('pjpg').to_url
+    - if content.image.title.present?
+      figcaption = content.image.title
