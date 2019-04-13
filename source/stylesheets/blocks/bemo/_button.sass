@@ -63,12 +63,13 @@
   @extend .button
 
 .button--primary
-  color: $base-body-color
+  background-color: color(primary)
+  color: color(white)
   border-color: color(primary)
 
   &:hover
-    color: color(white)
-    background-color: color(primary)
+    color: $base-body-color
+    background-color: color(white)
     transition: all .3s
 
 
