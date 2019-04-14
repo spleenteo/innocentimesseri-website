@@ -16,11 +16,11 @@ section.section--article
       == dato.who.body
 
     .section__footer
-      = link_to "Contattaci", "#", class: "button--primary"
+      = partial "/partials/contact"
 
 
 .wrap
-  section.section--border-top
+  section.section
     .grid
       - dato.who.team_module.each do |t|
         .grid__item.tab-6-12

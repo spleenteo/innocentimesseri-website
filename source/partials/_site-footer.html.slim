@@ -1,34 +1,32 @@
 footer.footer: .footer__inner
+
   .wrap
-    .or.space--bottom-2
-      .or__item
-        p.milli Cristiana Innocenti
-        p.milli P.iva 06812660485
+    .grid.grid--middle.space--bottom-2
+      .grid__item.lap-4-12
+        p.smallprint Cristiana Innocenti
+        p.smallprint P.iva 06812660485
 
-      .or__item
-        p.milli Michela Messeri
-        p.milli P.iva 06813840482
+      .grid__item.lap-4-12
+        ul.footer__socials
+          li.footer__socials__item
+            = link_to inline_svg("facebook.svg", size: "20*20"),
+              "https://www.facebook.com/innocentimesseri/",
+              target: "_blank"
 
-    ul.footer__socials
-      li.footer__socials__item
-        = link_to inline_svg("twitter.svg", size: "20*20"),
-          "https://www.twitter.com",
-          target: "_blank"
+          li.footer__socials__item
+            = link_to inline_svg("instagram.svg", size: "20*20"),
+              "https://www.instagram.com/innocenti_messeri/",
+              target: "_blank"
 
-      li.footer__socials__item
-        = link_to inline_svg("facebook.svg", size: "20*20"),
-          "https://www.twitter.com",
-          target: "_blank"
+          li.footer__socials__item
+            = link_to inline_svg("behance.svg", size: "20*20"),
+              "https://www.behance.net/InnocentiMesseri",
+              target: "_blank"
+      .grid__item.lap-4-12
+        p.smallprint Michela Messeri
+        p.smallprint P.iva 06813840482
 
-      li.footer__socials__item
-        = link_to inline_svg("instagram.svg", size: "20*20"),
-          "https://www.twitter.com",
-          target: "_blank"
 
-      li.footer__socials__item
-        = link_to inline_svg("youtube.svg", size: "20*20"),
-          "https://www.twitter.com",
-          target: "_blank"
 
     / = ["©#{Time.now.year}",
     /     (link_to "Privacy Policy",
@@ -46,6 +44,6 @@ footer.footer: .footer__inner
         t('credits.url'),
         title: t('credits.title'),
         target: "_blank"),
-        (link_to "with DatoCMS",
+        (link_to " DatoCMS",
           "https://datocms.com",
           target: "_blank")].join(" ")

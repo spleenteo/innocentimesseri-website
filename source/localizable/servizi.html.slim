@@ -6,6 +6,11 @@
     .hero__body__inner
       .hero__heading
         = inline_svg "servizi.svg", class: "hero__heading__image"
+      .hero__text
+        h1.page__title = dato.services_page.subtitle
+        p = dato.services_page.body
+
+
 
 section.section: .wrap
   .grid--center
