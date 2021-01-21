@@ -41,6 +41,7 @@ configure :development do
   activate :livereload
 end
 
+
 helpers do
   def active?(url)
     (url === "/#{I18n.locale}/" && current_page.url === "/#{I18n.locale}/") ||
@@ -139,6 +140,15 @@ langs.each do |locale|
         "/#{locale}/portfolio/#{p.slug}/index.html",
         "/templates/portfolio.html",
         locals: { portfolio: p },
+        locale: locale
+      )
+    end
+
+    dato.services.each do |p|
+      proxy(
+        "/#{locale}/servizi/#{p.slug}/index.html",
+        "/templates/servizio.html",
+        locals: { service: p },
         locale: locale
       )
     end
