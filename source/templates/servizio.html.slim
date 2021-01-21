@@ -1,0 +1,30 @@
+.wrap: .case
+  .case__header
+    - if service.icon.present?
+      .case__logo
+        = image_tag service.icon.file.width(150).height(150).format('png').to_url, title: service.name
+    h1.case__title class=(service.codename) = service.title
+    
+    .space--top-3
+      .case__service = service.description
+
+    .space--top-3
+      = partial "/partials/contact", locals: {label: "Richiedi un preventivo!"}
+
+      = link_to "Tutti i servizi", "/#{I18n.locale}/servizi/", class: "button--secondary space--left-3"
+
+.wrap
+  section.section--border-top
+
+    .grid--center
+      .works
+        - dato.portfolios.select{|p| p.published == true && p.service == service}.sort_by(&:position).each do |p|
+          .grid__item.lap-6-12.desk-4-12
+            = link_to "/#{I18n.locale}/portfolio/#{p.slug}/", class: "work work--#{p.service.codename} #{p.service.codename} space--bottom-2", style: "max-width: 100%"
+              .work__image
+                = image_tag p.featured_image.file.width(600).format('pjpg').to_url
+              .work__body
+                .work__body__title
+                  h3 = p.title
+                  p = p.service.title.downcase
+
