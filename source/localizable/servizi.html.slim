@@ -17,6 +17,6 @@ section.section: .wrap
     - dato.services.sort_by(&:position).each do |s|
       .grid__item.tab-5-12.space--bottom-5
         div class=("service--#{s.codename.downcase}")
-          h2.service__title = s.title
+          h2.space--bottom-1 = link_to s.title, "/#{I18n.locale}/servizi/#{s.slug}", class: "service__title"
           .service__body == s.description if s.description.present?
 
