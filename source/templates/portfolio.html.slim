@@ -3,7 +3,9 @@
     .case__logo
       = image_tag portfolio.client.logo.file.width(150).height(150).format('png').to_url, title: portfolio.client.name
     h1.case__title = portfolio.title
-    .case__service class=(portfolio.service.codename) = portfolio.service.title
+    = link_to portfolio.service.title,
+      "/#{I18n.locale}/servizi/#{portfolio.service.slug}",
+      class: "service__title case__service #{portfolio.service.codename}"
 
   .case__featured
     = image_tag portfolio.featured_image.file.width(1200).format('pjpg').to_url
